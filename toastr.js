@@ -341,10 +341,8 @@
                     }
                     
                     if (options.icon) {
-                        $toastElement.css({
-                            'background-image' : 'url(' + options.icon + ') !important',
-                            'background-size': '24px auto',
-                        })
+                        $toastElement
+                            .attr('style', 'background-image: url("' + options.icon + '") !important; background-size: 24px auto');
                     }
                 }
 
