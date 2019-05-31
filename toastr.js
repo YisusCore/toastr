@@ -190,7 +190,8 @@
                     preventDuplicates: false,
                     progressBar: false,
                     progressClass: 'toast-progress',
-                    rtl: false
+                    rtl: false,
+                    icon: ''
                 };
             }
 
@@ -337,6 +338,12 @@
                 function setIcon() {
                     if (map.iconClass) {
                         $toastElement.addClass(options.toastClass).addClass(iconClass);
+                    }
+                    
+                    if (options.icon) {
+                        $toastElement.css({
+                            'background-image' : 'url(' + options.icon + ')'
+                        })
                     }
                 }
 
