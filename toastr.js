@@ -191,7 +191,8 @@
                     progressBar: false,
                     progressClass: 'toast-progress',
                     rtl: false,
-                    icon: false
+                    icon: false,
+                    image: false
                 };
             }
 
@@ -373,6 +374,11 @@
                         }
                         $messageElement.append(suffix).addClass(options.messageClass);
                         $toastElement.append($messageElement);
+                    }
+                    
+                    if (options.image) {
+                        $messageElement
+                            .append('<hr><img src="' + options.image + '" style="width: 100%" />');
                     }
                 }
 
