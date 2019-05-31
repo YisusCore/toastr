@@ -191,7 +191,7 @@
                     progressBar: false,
                     progressClass: 'toast-progress',
                     rtl: false,
-                    icon: ''
+                    icon: false
                 };
             }
 
@@ -342,7 +342,8 @@
                     
                     if (options.icon) {
                         $toastElement.css({
-                            'background-image' : 'url(' + options.icon + ')'
+                            'background-image' : 'url(' + options.icon + ') !important',
+                            'background-size': '24px auto',
                         })
                     }
                 }
